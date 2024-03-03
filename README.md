@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy on Vercel
 
-This project is deployed on vercel. The url to see the deployment is `https://github.com/`
+This project is deployed on vercel. The url to see the deployment is `https://video-player-app-eight.vercel.app/`
