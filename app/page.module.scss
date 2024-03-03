@@ -1,0 +1,24 @@
+@import "../styles/viewportMixin.scss";
+
+.main {
+  background: #0f0f0f;
+  padding: 50px 20px;
+  @include for-large-devices {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+}
+.videoDetails {
+  color: #fff;
+  h2 {
+    margin-top: 20px;
+  }
+  p {
+    font-size: 12px;
+    padding: 2px 0;
+  }
+}
+.desc {
+  margin-top: 10px;
+}

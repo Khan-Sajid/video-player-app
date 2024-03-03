@@ -1,0 +1,122 @@
+.container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.fullScreen {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0px;
+  }
+  video {
+    z-index: 0;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+.controlBar {
+  padding: 10px 15px 15px;
+  background-color: rgb(39 38 38 / 38%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+.icon {
+  color: white;
+  cursor: pointer;
+}
+.control {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span {
+    min-width: 100px;
+  }
+  select {
+    background: white;
+    border: 1px solid #8c8c8c;
+    border-radius: 7px;
+    width: 48px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+.seekBar {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  cursor: pointer;
+  background-image: linear-gradient(rgb(126, 3, 68), rgb(126, 3, 68));
+  background-repeat: no-repeat;
+  &::-webkit-slider-thumb {
+    display: none;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(126, 3, 68);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+  &::-moz-range-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(126, 3, 68);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -2.5px;
+  }
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    border-radius: 5px;
+  }
+  &::-moz-range-track {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    border-radius: 5px;
+  }
+  &:hover {
+    outline: 1px white solid;
+    &::-webkit-slider-thumb {
+      display: block;
+    }
+  }
+}
+.fullscreenBtn {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
